@@ -26,3 +26,11 @@
 Создаем 2 хеш-таблицы. в первой ключами являются пункты отправления, а значениями карточки.
 Во втором ключи - пункты назначения.
 Зная начальную и конечную точки, находим маршрут.
+
+### Пример использования:
+
+	var tr = new Trip();
+	var sortedArr = tr.sort(dataExample);
+	var phrases = tr.createSentence(sortedArr);
+	tr.toHtmlRoute(phrases); 
+
