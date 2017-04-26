@@ -67,8 +67,8 @@ function Trip(data) {
     return sorted;  
     };
     
-    Trip.prototype.alertRoute = function(data) {
-        
+    Trip.prototype.createSentence = function(data) {
+        var ar = [];
         data.forEach(card => {
             var sentence = '';
             switch (card.type) {
@@ -99,8 +99,27 @@ function Trip(data) {
                 
       
         }
-        alert(sentence);
+        ar[ar.length] = sentence;
             
+           
+        });
+        return ar;
+    };
+            
+    Trip.prototype.alertRoute = function(data) {
+        data.forEach(sentence => {
+            alert(sentence);
+        });
+    };
+    
+    Trip.prototype.toHtmlRoute = function(data) {
+        var list = document.createElement('ol');
+        //list.innerHTML = "";
+        document.body.appendChild(list);
+        data.forEach(sentence => {
+            var newLi = document.createElement('li');
+            newLi.innerHTML = sentence;
+            list.appendChild(newLi);
            
         });
     };

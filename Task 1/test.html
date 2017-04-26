@@ -2,14 +2,21 @@
 <html lang="en">
     <head>
    <script src="data.js"></script>
-    <script src="trip.js"></script>
-    <script>
-        var tr = new Trip();
-        var sortedArr = tr.sort(dataExample);
-        tr.alertRoute(sortedArr);
-    </script>    
+    <script src="trip.js">
+        
+</script>
+       
     </head>
 	<body>
-       
+        <ol id="list">
+        </ol>
+        
+        <script>
+            var tr = new Trip();
+            var sortedArr = tr.sort(dataExample);
+            var phrases = tr.createSentence(sortedArr)
+            //tr.alertRoute(phrases);
+            tr.toHtmlRoute(phrases);
+        </script> 
 	</body>
 </html>
