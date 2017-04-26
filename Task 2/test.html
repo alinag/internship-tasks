@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <script src="fw.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        
+        function red() {
+            fw('#btn1').add("red-btn");
+        }
+        function grey() {
+            fw('body').toggle("grey-body");
+        }
+        function big() {
+            fw('.big-btn').delete("big-btn");
+        }
+        
+    </script>    
+    </head>
+	<body>
+        <div>
+            <button class="big-btn" id="btn1" onclick="red();">Add class "red-btn"</button>
+            <button class="big-btn" onclick="grey();">Toggle class "grey-body"</button>
+            <button class="big-btn" onclick="big();">Delete class "big-btn"</button>
+        </div>
+	</body>
+</html>
